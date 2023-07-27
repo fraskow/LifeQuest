@@ -2,11 +2,16 @@ package f5.frasko.models;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -20,9 +25,20 @@ public class Objetive {
     @Column(name = "idobjetive")
     public int idobjetive;
 
-    // TODO user fk
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "fk_user", nullable = false)
+    @JsonIgnore
+    private User userObjetive;
 
-    // TODO category fk
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "fk_category", nullable = false)
+    @JsonIgnore
+    private CategoryObjetive category;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "fk_register", nullable = false)
+    @JsonIgnore
+    private RegisterOfObjetive register;
 
     @Column(name = "title")
     public String title;
