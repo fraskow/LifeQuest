@@ -20,13 +20,12 @@ public class CategoryObjetive {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idcategories")
     public int idcategories;
-    @Column(name="name")
+    @Column(name = "name")
     public String name;
-    @Column(name="description")
+    @Column(name = "description")
     public String description;
 
     @OneToMany(mappedBy = "category")
     public List<Objetive> objetives;
-    
 
 }

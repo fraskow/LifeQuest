@@ -32,6 +32,5 @@ public class User {
 
     @OneToMany(mappedBy = "userComment")
     public List<Comment> comments;
-    
 
 }

@@ -1,6 +1,6 @@
 package f5.frasko.models;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -40,9 +40,8 @@ public class Comment {
     @Column(name="content")
     public String content;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="date")
-    private Date date;
+    @Column(name="date", columnDefinition = "TIMESTAMP")
+    private Timestamp date;
 
 
 }

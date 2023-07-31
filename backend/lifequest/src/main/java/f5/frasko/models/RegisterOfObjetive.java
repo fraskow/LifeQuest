@@ -14,20 +14,20 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name="registers")
+@Table(name = "registers")
 public class RegisterOfObjetive {
-    
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="idregister")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idregister")
     public int idregister;
 
     @OneToMany(mappedBy = "register")
     public List<Objetive> objetives;
 
-    @Column(name="register_date")
+    @Column(name = "register_date")
     public Date registerDate;
-    @Column(name="description", nullable = true)
+    @Column(name = "description", nullable = true)
     public String descrption;
 
 }
