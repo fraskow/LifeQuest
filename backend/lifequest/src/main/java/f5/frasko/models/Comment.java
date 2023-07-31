@@ -38,7 +38,7 @@ public class Comment {
     @Column(name="content")
     public String content;
 
-    @Column(name="date", columnDefinition = "TIMESTAMP")
+    @Column(name="date", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Timestamp date;
 
 
