@@ -1,6 +1,7 @@
 package f5.frasko.models;
 
 import java.sql.Date;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -12,6 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -35,10 +37,8 @@ public class Objetive {
     @JsonIgnore
     private CategoryObjetive category;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "fk_register", nullable = false)
-    @JsonIgnore
-    private RegisterOfObjetive register;
+    @OneToMany(mappedBy = "objetive")
+    private List<RegisterOfObjetive> register;
 
     @Column(name = "title")
     public String title;
