@@ -8,6 +8,6 @@ import f5.frasko.models.User;
 
 public interface UserRepo extends JpaRepository<User, Long> {
 
-    Optional<User> findByMail(String email);
+    Optional<User> findByemail(String email);
 
 }
