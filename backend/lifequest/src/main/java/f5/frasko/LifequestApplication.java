@@ -1,4 +1,4 @@
-package f5.frasko.lifequest;
+package f5.frasko;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
