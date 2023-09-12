@@ -1,6 +1,7 @@
 package f5.frasko.models;
 
-import java.sql.Date;
+// import java.sql.Date;
+import java.sql.Timestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -26,12 +27,13 @@ public class RegisterOfObjetive {
     public int idregister;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name="fk_objetive", nullable=false)
+    @JoinColumn(name = "fk_objetive", nullable = false)
     @JsonIgnore
     public Objetive objetive;
 
-    @Column(name = "register_date")
-    public Date registerDate;
+    @Column(name = "register_date", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    public Timestamp registerDate;
+
     @Column(name = "description", nullable = true)
     public String descrption;
 
