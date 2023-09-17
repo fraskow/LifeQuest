@@ -46,6 +46,4 @@ public class Objetive {
     public String description;
     @Column(name = "limit_date")
     public Date limitDate;
-    @Column(name = "priority")
-    public int priority;
 }
