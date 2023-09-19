@@ -39,16 +39,16 @@ public class CommentController {
         return commentService.getCommentById(id);
     }
 
-    @GetMapping("/byUserId/{id}")
+    @GetMapping("/byUserId/{userId}")
     public List<Comment> getCommentsByUserId(@PathVariable Long userId){
         User user = userService.getUserById(userId);
-        return commentService.findByUserId((long) user.getIduser());
+        return commentService.findByUserId(user.getIduser());
     }
 
-    @GetMapping("/byObjetive/{id}") 
+    @GetMapping("/byObjetive/{objetiveId}") 
     public List<Comment> getCommentsByObjetiveId(@PathVariable Long objetiveId){
         Objetive objetive = objService.getObjetiveById(objetiveId);
-        return commentService.findByObjetiveId((long) objetive.getIdobjetive());
+        return commentService.findByObjetiveId(objetive.getIdobjetive());
     }
 
     @PostMapping("/create")
