@@ -32,12 +32,12 @@ public class CommentService {
         return repo.save(comment);
     }
 
-    public Optional<List<Comment>> findByUserId(Long i){
-        return repo.findByUserId(i);
+    public List<Comment> findByUserId(Long userId){
+        return repo.findByUserId(userId);
     }
 
-    public Optional<List<Comment>> findByObjetiveId(Long id){
-        return repo.findByObjetiveId(id);
+    public List<Comment> findByObjetiveId(Long objetiveId){
+        return repo.findByObjetiveId(objetiveId);
     }
 
 }

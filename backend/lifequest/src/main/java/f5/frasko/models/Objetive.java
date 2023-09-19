@@ -25,7 +25,7 @@ public class Objetive {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idobjetive")
-    public int idobjetive;
+    public Long idobjetive;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "fk_user", nullable = false)
