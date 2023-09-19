@@ -31,12 +31,14 @@ VALUES (1, 2, 1, 'Este es un comentario de prueba.', CURRENT_TIMESTAMP);
 
 -- Otros comentarios ficticios
 INSERT INTO comments (idcomment, fk_user, fk_objetive, content, date)
-VALUES (2, 3, 2, 'Otro comentario ficticio.', '2023-09-13 12:00:00');
+VALUES (2, 3, 2, 'Otro comentario ficticio.', '2023-09-13 12:00:00'),
+(3, 2, 2, 'Otro comentario ficticio nº 2.', '2023-09-13 12:00:00');
 
 -- Insertar registros de objetivos de prueba
 INSERT INTO registers (idregister, fk_objetive, register_date, description)
 VALUES (1, 1, '2023-09-15 10:00:00', 'Descripción del registro 1');
 
 INSERT INTO registers (idregister, fk_objetive, register_date, description)
-VALUES (2, 2, '2023-09-20 14:30:00', 'Descripción del registro 2');
+VALUES (2, 2, '2023-09-20 14:30:00', 'Descripción del registro 2'),
+(3, 1, '2023-09-20 14:30:00', 'Descripción del registro 3');
 
