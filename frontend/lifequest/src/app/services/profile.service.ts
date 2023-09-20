@@ -7,7 +7,7 @@ import { User } from '../../app/models/user.model';
   providedIn: 'root'
 })
 export class ProfileService {
-  // private apiUrl = 'http://localhost:4000/login';
+
   private baseUrl = 'http://localhost:4000';
 
   private actualUser!: User;
@@ -16,7 +16,7 @@ export class ProfileService {
     return this.httpClient.post(`${this.baseUrl}/register`, user);
   }
   public loginUser(email: string, password: string, headers: HttpHeaders): Observable<any> {
-    return this.httpClient.post<any>(`${this.baseUrl}/login`, {}, { headers });
+    return this.httpClient.post<any>(`${this.baseUrl}/login`, {}, { headers, withCredentials:true });
   }
   setUser(user: any) {
     this.actualUser = user;

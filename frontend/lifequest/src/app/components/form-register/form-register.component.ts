@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpHeaders } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProfileService } from 'src/app/services/profile.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-register',
@@ -17,7 +18,7 @@ export class FormRegisterComponent {
   }
   errorMessage: string | null = null; // Variable para mostrar mensajes de error
 
-  constructor(private usersService: ProfileService, private formBuilder: FormBuilder) { }
+  constructor(private usersService: ProfileService, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.formregister = this.formBuilder.group({
@@ -35,6 +36,7 @@ export class FormRegisterComponent {
         .subscribe(
           (response) => {
             console.log('Usuario registrado con éxito:', response);
+            this.router.navigate(['/profile']);
           },
           (error) => {
             console.error('Error al registrar usuario:', error);
