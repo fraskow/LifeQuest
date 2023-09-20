@@ -12,11 +12,6 @@ import { Router } from '@angular/router';
 export class FormRegisterComponent {
 
   formregister!: FormGroup;
-  userData = {
-    email: '',
-    password: ''
-  }
-  errorMessage: string | null = null; // Variable para mostrar mensajes de error
 
   constructor(private usersService: ProfileService, private formBuilder: FormBuilder, private router: Router) { }
 
