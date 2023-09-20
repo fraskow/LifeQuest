@@ -17,7 +17,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FormLoginComponent } from './components/form-login/form-login.component';
 import { FormRegisterComponent } from './components/form-register/form-register.component';
 import { RouterModule } from '@angular/router';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,12 +34,14 @@ import { RouterModule } from '@angular/router';
     RegistersFormComponent,
     HomeComponent,
     FormLoginComponent,
-    FormRegisterComponent
+    FormRegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

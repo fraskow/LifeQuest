@@ -13,8 +13,8 @@ INSERT INTO roles (idrole, role) VALUES (1, 'ROLE_ADMIN'),(2, 'ROLE_USER');
 
 -- Inserting users
 INSERT INTO users (iduser, email, password) 
-VALUES ( 1, 'admin@lifequest.com', 'passwordAdmin'),
-(2,'user1@lifequest.com', 'password1'),(3,'user2@lifequest.com','password2');
+VALUES ( 1, 'admin@lifequest.com', '$2a$12$yIi.e/Dv/aJC6D7KNjVz/O3JAenUSF2n0I/c52Tb3xq6SF1HsRcLW'),
+(2,'user1@lifequest.com', '$2a$12$Gb4yKjA1sAhh8TAWE2beTudwFrdYcX9osoYZzVyypiBnfiQDLGhV.'),(3,'user2@lifequest.com','$2a$12$WYGHiNAszcko0FBf3cSj.epOR9W7acTgKNtfKyvyKYgBabGupkcNG');
 
 -- Inserting relation into role_users
 INSERT INTO roles_users (user_id, roles_id) VALUES (1,1),(2,2),(3,2);
