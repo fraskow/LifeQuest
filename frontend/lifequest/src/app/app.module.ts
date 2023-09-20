@@ -14,6 +14,9 @@ import { RegistersComponent } from './components/registers/registers.component';
 import { CommentsFormComponent } from './components/comments-form/comments-form.component';
 import { RegistersFormComponent } from './components/registers-form/registers-form.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormLoginComponent } from './components/form-login/form-login.component';
+import { FormRegisterComponent } from './components/form-register/form-register.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,11 +31,14 @@ import { HomeComponent } from './components/home/home.component';
     RegistersComponent,
     CommentsFormComponent,
     RegistersFormComponent,
-    HomeComponent
+    HomeComponent,
+    FormLoginComponent,
+    FormRegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

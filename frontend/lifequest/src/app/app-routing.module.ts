@@ -6,15 +6,19 @@ import { ObjetivesFormComponent } from './components/objetives-form/objetives-fo
 import { ObjetivesComponent } from './components/objetives/objetives.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentsFormComponent } from './components/comments-form/comments-form.component';
+import { FormRegisterComponent } from './components/form-register/form-register.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
 
+  {path: '', component: HomeComponent},
   {path: 'profile', component: ProfileResumeComponent},
   {path: 'details', component: ObjetivesDetailsComponent},
   {path: 'objetivesform', component: ObjetivesFormComponent},
   {path: 'objetives', component: ObjetivesComponent},
   {path: 'comments', component: CommentsComponent},
   {path: 'commentsform', component: CommentsFormComponent},
+  {path: 'registerform', component: FormRegisterComponent},
 
 ];
 
