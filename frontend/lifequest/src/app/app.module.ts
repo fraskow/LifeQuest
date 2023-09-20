@@ -13,6 +13,7 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { RegistersComponent } from './components/registers/registers.component';
 import { CommentsFormComponent } from './components/comments-form/comments-form.component';
 import { RegistersFormComponent } from './components/registers-form/registers-form.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RegistersFormComponent } from './components/registers-form/registers-fo
     CommentsComponent,
     RegistersComponent,
     CommentsFormComponent,
-    RegistersFormComponent
+    RegistersFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
