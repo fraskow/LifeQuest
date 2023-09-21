@@ -1,15 +1,9 @@
 <div id="divmax">
-    <div class="card" style="width: 18rem;">
-        <img src="../../../assets/imgs/profile-pic.png" class="card-img-top" alt="...">
+    <div class="card" style="width: 18rem;" *ngIf="actualUser">
+        <img src="../../../assets/imgs/profile-pic.png" class="card-img-top" alt="Profile img">
         <div class="card-body">
-            <h5 class="card-title">Profile X</h5>
-            <p class="card-text">Detalles profile X</p>
+            <h5 class="card-title">{{actualUser.email}}</h5>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Dato personal X</li>
-            <li class="list-group-item">x2</li>
-            <li class="list-group-item">x3</li>
-        </ul>
         <div class="card-body">
             <a href="#" class="card-link">Comentarios</a>
             <a href="#" class="card-link">Objetivos</a>
@@ -19,5 +13,4 @@
         <app-objetives></app-objetives>
         <input class="btn btn-primary" type="button" value="Add Objetives" id="addButton" [routerLink]="['/objetivesform']" id="objetivesbutton">
     </div>
-    
 </div>

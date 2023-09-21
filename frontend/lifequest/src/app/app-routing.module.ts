@@ -12,7 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 const routes: Routes = [
 
   {path: '', component: HomeComponent},
-  {path: 'profile', component: ProfileResumeComponent},
+  {path: 'profile/:id', component: ProfileResumeComponent},
   {path: 'details', component: ObjetivesDetailsComponent},
   {path: 'objetivesform', component: ObjetivesFormComponent},
   {path: 'objetives', component: ObjetivesComponent},

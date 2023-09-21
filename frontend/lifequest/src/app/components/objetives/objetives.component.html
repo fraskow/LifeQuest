@@ -1,8 +1,5 @@
 <div class="container-fluid" id="example">
-    <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action">The current link item</a>
-        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+    <div class="list-group" *ngIf="actualUser">
+        <a href="#" class="list-group-item list-group-item-action" *ngFor="let objetive of actualUser.objetives">{{objetive.title}}</a>
     </div>
 </div>
