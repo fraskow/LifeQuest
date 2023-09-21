@@ -40,7 +40,7 @@ export class FormLoginComponent {
     this.usersService.loginUser(username, password, headers).subscribe(
       (data) => {
         console.log(data);
-        this.router.navigate(['/profile']);
+        this.router.navigate(['/profile/',2]); //fakeado.
       },
       (error) => {
         console.error('Login error:', error);
