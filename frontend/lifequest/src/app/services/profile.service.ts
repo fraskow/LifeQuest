@@ -22,12 +22,10 @@ export class ProfileService {
     return this.httpClient.post<any>(`${this.baseUrl}/login`, {}, { headers, withCredentials: true });
   }
 
-  // setUser(user: any) {
-  //   this.actualUser = user;
-  // }
-  // getUser(): User {
-  //   return this.actualUser;
-  // }
+  getUserIdByEmail(email: string) {
+    const url = `${this.baseUrl}/users/getid?email=${email}`;
+    return this.httpClient.get<number>(url);
+  }
 
   getAllUsers(): Observable<User[]> {
     return this.httpClient.get<User[]>(`${this.baseUrl}/users`);

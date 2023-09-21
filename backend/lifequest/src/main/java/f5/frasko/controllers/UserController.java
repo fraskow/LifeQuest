@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import f5.frasko.models.User;
@@ -42,6 +43,11 @@ public class UserController {
     @DeleteMapping
     public void deleteUser(@RequestBody User user){
         service.deleteUser(user);
+    }
+
+    @GetMapping("/getid")
+    public Long getUserId(@RequestParam String email){
+        return service.getUserId(email);
     }
 
 }

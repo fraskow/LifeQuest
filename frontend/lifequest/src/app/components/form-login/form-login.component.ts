@@ -3,6 +3,7 @@ import { HttpHeaders } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProfileService } from 'src/app/services/profile.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/user.model';
 
 
 @Component({
@@ -40,7 +41,10 @@ export class FormLoginComponent {
     this.usersService.loginUser(username, password, headers).subscribe(
       (data) => {
         console.log(data);
-        this.router.navigate(['/profile/',2]); //fakeado.
+        this.getUserId(username).subscribe((userId) => {
+          console.log(userId);
+          this.router.navigate(['/profile', userId]);
+        });
       },
       (error) => {
         console.error('Login error:', error);
@@ -51,5 +55,8 @@ export class FormLoginComponent {
         }
       }
     );
+  }
+  getUserId(email: string){
+    return this.usersService.getUserIdByEmail(email)
   }
 }

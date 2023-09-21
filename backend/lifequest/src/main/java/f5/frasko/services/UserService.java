@@ -26,6 +26,10 @@ public class UserService {
         return repo.findAll();
     }
 
+    public Long getUserId(String email){
+        return repo.findByemail(email).get().iduser;
+    }
+
     public User getUserById(Long id) {
         Optional<User> opt = repo.findById(id);
         if (opt.isPresent()) {
