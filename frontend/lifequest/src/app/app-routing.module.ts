@@ -13,8 +13,7 @@ const routes: Routes = [
 
   {path: '', component: HomeComponent},
   {path: 'profile/:id', component: ProfileResumeComponent},
-  {path: 'objetivesdetails/:id', component: ObjetivesDetailsComponent},
-  {path: 'details', component: ObjetivesDetailsComponent},
+  {path: 'objetives/:id', component: ObjetivesDetailsComponent},
   {path: 'objetivesform', component: ObjetivesFormComponent},
   {path: 'objetives', component: ObjetivesComponent},
   {path: 'comments', component: CommentsComponent},

@@ -35,6 +35,6 @@ public class RegisterOfObjetive {
     public Timestamp registerDate;
 
     @Column(name = "description", nullable = true)
-    public String descrption;
+    public String description;
 
 }

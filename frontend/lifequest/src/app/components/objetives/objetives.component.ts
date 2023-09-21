@@ -11,7 +11,14 @@ import { ProfileService } from 'src/app/services/profile.service';
 export class ObjetivesComponent implements OnInit{
   actualUser: User | undefined;
   objetive: any;
+
+  selectedIdobjetive: number | undefined;
+
   constructor(private profileService: ProfileService, private route: ActivatedRoute) { }
+
+  verDetalleObjetive(idobjetive: number) {
+    this.selectedIdobjetive = idobjetive;
+  }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {

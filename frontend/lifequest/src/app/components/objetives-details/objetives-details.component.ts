@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { User } from 'src/app/models/user.model';
+import { Objective, User } from 'src/app/models/user.model';
+import { ObjetiveService } from 'src/app/services/objetives.service';
 import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
@@ -11,17 +12,18 @@ import { ProfileService } from 'src/app/services/profile.service';
 export class ObjetivesDetailsComponent implements OnInit{
 
   actualUser: User | undefined;
+  actualObjetive: Objective | undefined;
 
-  constructor(private profileService: ProfileService, private route: ActivatedRoute) { }
+  constructor(private profileService: ProfileService, private route: ActivatedRoute,private objetiveService: ObjetiveService) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      const userId = params.get('id');
-      if (userId) {
-        this.profileService.getUserById((userId)).subscribe(
-          user => {
-            this.actualUser = user;
-            console.log(user);
+      const objetiveId = params.get('id');
+      if (objetiveId) {
+        this.objetiveService.getObjetiveById((objetiveId)).subscribe(
+          objetive => {
+            this.actualObjetive = objetive;
+            console.log(objetive);
           },
           error => {
             console.error('Error al obtener el usuario:', error);
@@ -29,5 +31,4 @@ export class ObjetivesDetailsComponent implements OnInit{
         );
       }
     });
-}
-}
+}}

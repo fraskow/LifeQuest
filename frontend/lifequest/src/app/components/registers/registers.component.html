@@ -1,9 +1,8 @@
-<div class="container-fluid" id="example2">
-    <ul class="list-group">
-        <h4 class="list-group-item">Registros de objetivo</h4>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-      </ul>
+<div class="container-fluid" id="example">
+  <h3>Registros</h3>
+  <div class="list-group" *ngIf="actualUser">
+    <div *ngFor="let objetive of actualUser.objetives" class="list-group-item">
+      <li *ngFor="let regis of objetive.register">{{regis.description}}</li>
+    </div>
+  </div>
 </div>
