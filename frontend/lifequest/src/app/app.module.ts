@@ -19,6 +19,7 @@ import { FormRegisterComponent } from './components/form-register/form-register.
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FormLoginComponent,
     FormRegisterComponent,
+    ProfileCardComponent,
   ],
   imports: [
     BrowserModule,

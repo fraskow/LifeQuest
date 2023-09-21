@@ -4,13 +4,13 @@ import { User } from 'src/app/models/user.model';
 import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
-  selector: 'app-objetives-details',
-  templateUrl: './objetives-details.component.html',
-  styleUrls: ['./objetives-details.component.scss']
+  selector: 'app-profile-card',
+  templateUrl: './profile-card.component.html',
+  styleUrls: ['./profile-card.component.scss']
 })
-export class ObjetivesDetailsComponent implements OnInit{
+export class ProfileCardComponent implements OnInit {
 
-  actualUser: User | undefined;
+  actualUser!: User;
 
   constructor(private profileService: ProfileService, private route: ActivatedRoute) { }
 
@@ -29,5 +29,5 @@ export class ObjetivesDetailsComponent implements OnInit{
         );
       }
     });
-}
+  }
 }

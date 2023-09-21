@@ -8,7 +8,7 @@ import { ProfileService } from 'src/app/services/profile.service';
   templateUrl: './objetives.component.html',
   styleUrls: ['./objetives.component.scss']
 })
-export class ObjetivesComponent {
+export class ObjetivesComponent implements OnInit{
   actualUser: User | undefined;
   objetive: any;
   constructor(private profileService: ProfileService, private route: ActivatedRoute) { }
