@@ -26,7 +26,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "iduser")
-    public int iduser;
+    public Long iduser;
 
     @Column(name = "email")
     public String email;
@@ -38,11 +38,12 @@ public class User {
     public List<Objetive> objetives;
 
     @OneToMany(mappedBy = "userComment")
+    @JsonIgnore
     public List<Comment> comments;
 
-    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "roles_users", joinColumns = @JoinColumn(name="user_id"), inverseJoinColumns = @JoinColumn(name="roles_id"))
+    // @JsonIgnore
     private Set<Role> roles;
 
 }

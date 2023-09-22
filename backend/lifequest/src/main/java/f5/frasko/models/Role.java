@@ -2,6 +2,8 @@ package f5.frasko.models;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,6 +26,7 @@ public class Role {
     private String role;
 
     @ManyToMany(mappedBy = "roles")
+    @JsonIgnore
     public List<User> users;
 
 }

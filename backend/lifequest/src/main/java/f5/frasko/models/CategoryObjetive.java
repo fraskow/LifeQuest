@@ -19,7 +19,7 @@ public class CategoryObjetive {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idcategories")
-    public int idcategories;
+    public Long idcategories;
     @Column(name = "name")
     public String name;
     @Column(name = "description")

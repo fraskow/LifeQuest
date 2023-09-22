@@ -23,7 +23,7 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="idcomment")
-    public int idcomment;
+    public Long idcomment;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "fk_user", nullable = false)

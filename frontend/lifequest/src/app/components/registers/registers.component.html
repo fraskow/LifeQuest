@@ -1,0 +1,8 @@
+<div class="container-fluid" id="example">
+  <h3>Registros</h3>
+  <div class="list-group" *ngIf="actualUser">
+    <div *ngFor="let objetive of actualUser.objetives" class="list-group-item">
+      <li *ngFor="let regis of objetive.register">{{regis.description}}</li>
+    </div>
+  </div>
+</div>

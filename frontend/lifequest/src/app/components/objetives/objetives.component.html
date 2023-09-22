@@ -1,0 +1,5 @@
+<div class="container-fluid" id="example">
+    <div class="list-group" *ngIf="actualUser">
+        <a *ngFor="let objetive of actualUser.objetives" [routerLink]="['/objetives/', actualUser.iduser]" class="list-group-item list-group-item-action" >{{objetive.title}}</a>
+    </div>
+</div>

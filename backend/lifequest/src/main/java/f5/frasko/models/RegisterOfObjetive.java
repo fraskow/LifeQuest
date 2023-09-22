@@ -24,7 +24,7 @@ public class RegisterOfObjetive {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idregister")
-    public int idregister;
+    public Long idregister;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "fk_objetive", nullable = false)
@@ -35,6 +35,6 @@ public class RegisterOfObjetive {
     public Timestamp registerDate;
 
     @Column(name = "description", nullable = true)
-    public String descrption;
+    public String description;
 
 }
